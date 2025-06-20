@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context=".EditProfileActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green" />
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/green"
+        android:padding="16dp"
+        android:paddingBottom="25dp">
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="203dp"
+            android:layout_height="41dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="47dp"
+            android:text="@string/edit_profile"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="-90dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circle_bg"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/onboard2_png" />
+
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="174dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="-30dp"
+            android:contentDescription="@string/change_profile_picture"
+            android:src="@drawable/ic_camera" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihini_athukorala"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- Order Status Icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+    </LinearLayout>
+
+    <!-- User Information -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            android:text="@string/name" />
+
+        <EditText android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lihini Athukorala"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            android:text="@string/e_mail" />
+
+        <EditText android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lihini0511_gmail_com"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            android:text="@string/address" />
+
+        <EditText android:id="@+id/inputAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/_200_ihalayagoda_gampaha"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightgreen"
+            android:text="@string/save_changes" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:backgroundTint="@color/gray"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>

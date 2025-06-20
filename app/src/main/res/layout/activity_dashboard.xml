@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="#3E2723"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:text="@string/planty_life" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/order_your_favorite_plants"
+        android:textColor="#5D4037"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_bg"
+        android:hint="@string/search"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="16sp" />
+
+    <!-- Categories List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/indoorPlants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/indoor_plants"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/outdoorPlants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/outdoor_plants"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flowerPlants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/flower_plants"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deskPlants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/desk_plants"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Bottom Navigation -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_nav_bg"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+
+            android:id="@+id/home_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#4E7231"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_tab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cart"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_tab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_tab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_setting"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

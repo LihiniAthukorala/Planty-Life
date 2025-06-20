@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#C0E4A7"/>  <!-- Background color -->
+
+    <corners android:topLeftRadius="20dp" android:topRightRadius="20dp"/> <!-- Rounded top corners -->
+
+    <padding android:left="16dp" android:right="16dp" android:top="8dp" android:bottom="8dp"/>
+
+    <size android:height="60dp"/>  <!-- Height of the bottom nav -->
+</shape>
